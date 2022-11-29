@@ -26,9 +26,6 @@ namespace DemoKaibay.Controllers
         public async Task<ActionResult> Create(CreateAuctionItemDto value)
         {
             await kaibayService.CreateAuction(value, User);
-
-            await kaibayService.GetActiveAuctions();
-
             return RedirectToAction("Index", "Home");
         }
 
